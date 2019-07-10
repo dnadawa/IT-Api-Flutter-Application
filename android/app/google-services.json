@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "763775933643",
+    "firebase_url": "https://ict-api.firebaseio.com",
+    "project_id": "ict-api",
+    "storage_bucket": "ict-api.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:763775933643:android:079c1210b0efa9b4",
+        "android_client_info": {
+          "package_name": "dnadawa.ict_api"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "763775933643-ti278l1dfmgj7vn1elbopfkaekvqofat.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "dnadawa.ict_api",
+            "certificate_hash": "d4b69624f94f572c92f0ade3fbe40ad86d87dd10"
+          }
+        },
+        {
+          "client_id": "763775933643-ge2actnigqku6c3u43rn23ip5hc3vde1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA48eUTpTFOZO_sPBpjdKDra2C-dDbZQpo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "763775933643-ge2actnigqku6c3u43rn23ip5hc3vde1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
