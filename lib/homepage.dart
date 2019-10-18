@@ -74,14 +74,18 @@ class _NewHomePageState extends State<NewHomePage> {
 
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 15),
-                child: Container(
+                child: GestureDetector(
+                  onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => TermTestPapers()));
+                    },
+                  child: Container(
                     width: 120,
                     height: 100,
                     decoration: ShapeDecoration(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),color: Colors.white),
-
-                    child: GestureDetector(
-//
-                      child: Center(
+                    child: Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
@@ -90,27 +94,26 @@ class _NewHomePageState extends State<NewHomePage> {
                           ],
                         ),
                       ),
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => TermTestPapers()));
-                      },
-                    )),
+                  ),
+                ),
               ),
 
 
 
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 15),
-                child: Container(
+                child: GestureDetector(
+                  onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => PastPapers()));
+                    },
+                  child: Container(
                     width: 120,
                     height: 100,
                     decoration: ShapeDecoration(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),color: Colors.white),
-
-                    child: GestureDetector(
-//
-                      child: Center(
+                    child: Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
@@ -119,27 +122,26 @@ class _NewHomePageState extends State<NewHomePage> {
                         ],
                       ),
                     ),
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => PastPapers()));
-                      },
-                    )),
+                  ),
+                ),
               ),
 
 
 
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 15),
-                child: Container(
+                child: GestureDetector(
+                  onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => ModelPapers()));
+                    },
+                  child: Container(
                     width: 120,
                     height: 100,
                     decoration: ShapeDecoration(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),color: Colors.white),
-
-                    child: GestureDetector(
-//
-                      child: Center(
+                    child: Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
@@ -148,27 +150,26 @@ class _NewHomePageState extends State<NewHomePage> {
                           ],
                         ),
                       ),
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => ModelPapers()));
-                      },
-                    )),
+                  ),
+                ),
               ),
 
 
 
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 15),
-                child: Container(
+                child: GestureDetector(
+                  onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => GIT()));
+                    },
+                  child: Container(
                     width: 120,
                     height: 100,
                     decoration: ShapeDecoration(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),color: Colors.white),
-
-                    child: GestureDetector(
-//
-                      child: Center(
+                    child: Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
@@ -177,13 +178,8 @@ class _NewHomePageState extends State<NewHomePage> {
                           ],
                         ),
                       ),
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => GIT()));
-                      },
-                    )),
+                  ),
+                ),
               ),
 
 
@@ -191,14 +187,18 @@ class _NewHomePageState extends State<NewHomePage> {
 
               Padding(
                 padding: const EdgeInsets.symmetric(vertical: 15),
-                child: Container(
+                child: GestureDetector(
+                  onTap: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => Notes()));
+                    },
+                  child: Container(
                     width: 120,
                     height: 100,
                     decoration: ShapeDecoration(shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(16)),color: Colors.white),
-
-                    child: GestureDetector(
-//
-                      child: Center(
+                    child: Center(
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           children: <Widget>[
@@ -207,13 +207,8 @@ class _NewHomePageState extends State<NewHomePage> {
                           ],
                         ),
                       ),
-                      onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => Notes()));
-                      },
-                    )),
+                  ),
+                ),
               ),
 
 //
@@ -359,25 +354,13 @@ class _NewHomePageState extends State<NewHomePage> {
                   Expanded(child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      ListTile(title: Text("2019 A/L Time Table",style: TextStyle(fontWeight: FontWeight.bold),),
-                          subtitle: Text("Education Publications Department",style: TextStyle(fontSize: 12),)),
+                      ListTile(title: Text("2019 ICT Marking Scheme Part 1",style: TextStyle(fontWeight: FontWeight.bold),),
+                          ),
 
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: <Widget>[
-                          ButtonTheme(
-                            height: 25,
-                            minWidth: 20,
 
-                            child: FlatButton(
-
-                              onPressed: ()=>launchURL("https://doenets.lk/documents/news-headlines/AL_Time_Table_2019_NEW1.pdf"),
-                              color: Color(0xff0B72AB),
-                              child: Text("New",style: TextStyle(color: Colors.white),),
-
-
-                            ),
-                          ),
 
                           ButtonTheme(
                             height: 25,
@@ -385,9 +368,9 @@ class _NewHomePageState extends State<NewHomePage> {
 
                             child: FlatButton(
 
-                              onPressed: ()=>launchURL("https://doenets.lk/documents/news-headlines/AL_Time_Table_2019_OLD1.pdf"),
+                              onPressed: ()=>launchURL("https://firebasestorage.googleapis.com/v0/b/ict-api.appspot.com/o/1234%5B1%5D.jpg?alt=media&token=faf148b4-76b1-4eed-9f0e-428f79f43117"),
                               color: Color(0xffAB0B0B),
-                              child: Text("Old",style: TextStyle(color: Colors.white),),
+                              child: Text("View",style: TextStyle(color: Colors.white),),
 
 
                             ),

@@ -37,7 +37,8 @@
           "other_platform_oauth_client": [
             {
               "client_id": "763775933643-ge2actnigqku6c3u43rn23ip5hc3vde1.apps.googleusercontent.com",
-              "client_type": 3
+              "client_type": 3,
+              "admob_app_id": "ca-app-pub-2946850357131537~8739245665"
             }
           ]
         }

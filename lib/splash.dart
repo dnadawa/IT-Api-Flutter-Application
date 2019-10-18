@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'dart:async';
 import 'dart:io';
 import 'main.dart';
+import 'package:firebase_admob/firebase_admob.dart';
 
 
 class Splash extends StatefulWidget {
@@ -11,6 +12,25 @@ class Splash extends StatefulWidget {
 }
 
 class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
+
+
+
+  static MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
+    keywords: <String>[],
+    childDirected: false,
+    testDevices: <String>[], // Android emulators are considered test devices
+  );
+  InterstitialAd myInterstitial = InterstitialAd(
+    // Replace the testAdUnitId with an ad unit id from the AdMob dash.
+    // https://developers.google.com/admob/android/test-ads
+    // https://developers.google.com/admob/ios/test-ads
+    adUnitId: "ca-app-pub-2946850357131537/7609996828",
+    targetingInfo: targetingInfo,
+    listener: (MobileAdEvent event) {
+      print("InterstitialAd event is $event");
+    },
+  );
+
 
 
 
@@ -29,7 +49,7 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
         .animate(iconAnimationController);
     iconAnimationController.forward();
 
-
+    FirebaseAdMob.instance.initialize(appId: "ca-app-pub-2946850357131537~8739245665");
     
     Timer(Duration(seconds: 3),()=>checkInternet()//Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context) => Myapp()),(Route<dynamic> route)=>false)
     );
@@ -43,7 +63,9 @@ class _SplashState extends State<Splash> with SingleTickerProviderStateMixin {
         print('connected');
 
 
-        Navigator.pushReplacement(context, CupertinoPageRoute(builder: (context) => Myapp()));
+        Navigator.pushReplacement(context, CupertinoPageRoute(builder: (context){
+          myInterstitial..load()..show();
+          return Myapp();}));
       }
     } on SocketException catch (_) {
       print('not connected');

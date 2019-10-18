@@ -83,6 +83,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation 'com.google.firebase:firebase-core:16.0.9'
+    //implementation 'com.google.firebase:firebase-messaging:19.0.0'
+
     //implementation 'com.google.firebase:firebase-ads:18.0.0'
     //implementation 'com.google.firebase:firebase-inappmessaging-display:17.2.0'
 

@@ -1,3 +1,4 @@
+import 'package:firebase_admob/firebase_admob.dart';
 import 'package:flutter/material.dart';
 import 'package:ict_api/term_test.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -12,6 +13,7 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 
 import 'past_papers.dart';
 import 'splash.dart';
+
 
 void main() {
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
@@ -59,6 +61,28 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
 
   FirebaseMessaging _firebaseMessaging = new FirebaseMessaging();
+
+
+
+ static MobileAdTargetingInfo targetingInfo = MobileAdTargetingInfo(
+    keywords: <String>[],
+    childDirected: false,
+    testDevices: <String>[], // Android emulators are considered test devices
+  );
+
+
+  BannerAd myBanner = BannerAd(
+    // Replace the testAdUnitId with an ad unit id from the AdMob dash.
+    // https://developers.google.com/admob/android/test-ads
+    // https://developers.google.com/admob/ios/test-ads
+    adUnitId: "ca-app-pub-2946850357131537/1487619213",
+    size: AdSize.banner,
+    targetingInfo: targetingInfo,
+    listener: (MobileAdEvent event) {
+      print("BannerAd event is $event");
+    },
+  );
+
 
 
    Future launchURL(String url) async{
@@ -122,7 +146,11 @@ class _HomePageState extends State<HomePage> {
     _firebaseMessaging.getToken().then((token){print(token);});
 
 
+    FirebaseAdMob.instance.initialize(appId: "ca-app-pub-2946850357131537~8739245665");
+    myBanner..load()..show();
+
   }
+
 
 
 

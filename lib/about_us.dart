@@ -30,11 +30,18 @@ class _AboutUSState extends State<AboutUS> {
 
             Padding(
               padding: const EdgeInsets.all(15),
-              child: new Text("We developed this app to help local ICT students who are "
-                  "facing the A/L exam. Our main goal is to improve thier output, "
-                  "writing ability and help them to face the exam with confidence. "
-                  "This app gives you direct access to lots of island wide school papers,past papers,model papers & Notes. Help your self out and good luck !"
-              ,style: TextStyle(fontSize: 15,color: Colors.grey),textAlign: TextAlign.justify,),
+              child: Column(
+                children: <Widget>[
+                  new Text("We developed this app to help local ICT students who are "
+                      "facing the A/L exam. Our main goal is to improve thier output, "
+                      "writing ability and help them to face the exam with confidence. "
+                      "This app gives you direct access to lots of island wide school papers,past papers,model papers & Notes. Help your self out and good luck !"
+                  ,style: TextStyle(fontSize: 15,color: Colors.grey),textAlign: TextAlign.justify,),
+
+                  new Text("\n\nNotes Provided By - https://www.facebook.com/warunaict/"
+                    ,style: TextStyle(fontSize: 15,color: Colors.grey)),
+                ],
+              ),
             )
           ],
         ),
